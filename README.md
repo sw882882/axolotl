@@ -257,6 +257,10 @@ Have dataset(s) in one of the following format (JSONL recommended):
   ```json
   {"conversations": [{"role": "...", "value": "..."}]}
   ```
+- `metharme`: instruction, adds additional eos tokens
+  ```json
+  {"prompt": "...", "generation": "..."}
+  ```
 - `sharegpt_simple.load_role`: conversations where `role` is used instead of `from`
   ```json
   {"conversations": [{"role": "...", "value": "..."}]}
@@ -622,7 +626,7 @@ strict:
 
 Run
 ```bash
-accelerate launch scripts/finetune.py configs/your_config.yml
+accelerate launch scripts/finetune.py your_config.yml
 ```
 
 #### Multi-GPU
