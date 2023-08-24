@@ -2,7 +2,7 @@ base_model: cerebras/btlm-3b-8k-base
 base_model_config: cerebras/btlm-3b-8k-base
 model_type: AutoModelForCausalLM
 tokenizer_type: GPT2Tokenizer
-trust_remote_code: true
+trust_remove_code: true
 load_in_8bit: false
 load_in_4bit: true
 strict: false
@@ -44,7 +44,7 @@ group_by_length: false
 bf16: true
 fp16: false
 tf32: true
-gradient_checkpointing: true
+gradient_checkpointing: false
 early_stopping_patience:
 resume_from_checkpoint:
 local_rank:
@@ -65,3 +65,4 @@ special_tokens:
   bos_token: "<|endoftext|>"
   eos_token: "<|endoftext|>"
   unk_token: "<|endoftext|>"
+  pad_token: "<|endoftext|>"
